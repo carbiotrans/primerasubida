@@ -1,0 +1,45 @@
+﻿{% extends "layout.html" %}
+
+{% block content %}
+
+<h2>{{ title }}.</h2>
+<h3>{{ message }}</h3>
+
+
+
+
+
+{% if results %}
+<page>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <table id="CLIENTES" style="width:50%" BORDER="1" CELLPADDING="3" CELLSPACING="2" RULES="ROWS" FRAME="BOX">
+
+        <tbody>
+
+
+            <div class="alert alert-primary" role="alert">
+                EJEMPLO DE PAGINA DISEÑO WEB INICIAL REFINERIA_MIO - PROYECTO WEB_PYTHON_TEST2-1.50 ESTA ES LA PAGINA LAYOUT COMUN
+            </div>
+
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Gender</th>
+            </tr>
+            {% for row in results %}
+            <tr>
+                <td> {{ row[1] }}</td>
+                <td> {{ row[2] }}</td>
+                <td> {{ row[3] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</page>
+
+{% endif %}
+
+
+
+{% endblock %}
